@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class GameMaster : MonoBehaviour {
 
-    public enum EstadosJuego { INSTANCIACION_BOTONERA, MOVIMIENTO, ESCONDER_BOTONERA, SIGUIENTE_JUGADOR };
+    public enum EstadosJuego { INSTANCIACION_BOTONERA, MOVIMIENTO, ESCONDER_BOTONERA, SIGUIENTE_JUGADOR,FIN };
 
     public static GameMaster instance; // SINGLETON
 
@@ -12,6 +12,8 @@ public class GameMaster : MonoBehaviour {
 
     public List<Jugador> Jugadores;
     public int IDJugadorActual;
+
+    public int turnoActual;
 
 	void Start () {
         if (instance == null)
@@ -24,6 +26,7 @@ public class GameMaster : MonoBehaviour {
         }
         IDJugadorActual = 0;
         estadoActual = EstadosJuego.INSTANCIACION_BOTONERA;
+        turnoActual = 1;
 	}
 	
 	// Update is called once per frame
@@ -35,6 +38,7 @@ public class GameMaster : MonoBehaviour {
             case EstadosJuego.ESCONDER_BOTONERA : { EsconderBotonera(IDJugadorActual); break;}
             case EstadosJuego.MOVIMIENTO : break;
             case EstadosJuego.SIGUIENTE_JUGADOR : {SiguienteJugador(); break;}
+            case EstadosJuego.FIN: break;
 
 
         }
@@ -51,6 +55,10 @@ public class GameMaster : MonoBehaviour {
     {
         IDJugadorActual++;
         IDJugadorActual %= Jugadores.Count;
+        if (IDJugadorActual == 0)
+        {
+            turnoActual++;
+        }
 
         estadoActual = EstadosJuego.INSTANCIACION_BOTONERA;
         return IDJugadorActual;

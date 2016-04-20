@@ -5,9 +5,9 @@ public class Collision : MonoBehaviour {
 
 	// Use this for initialization
 
-    public GameObject crashScreen;
+    //public GameObject crashScreen;
 	void Start () {
-        GameObject crashScreen = GameObject.FindGameObjectWithTag("CrashScreen");
+        //GameObject crashScreen = GameObject.FindGameObjectWithTag("CrashScreen");
         // GameMaster.instance.crashEvent += crash;
 	    
 	}
