@@ -62,6 +62,7 @@ public class GameMaster : MonoBehaviour {
     void EsconderBotonera(int ID)
     {
         Jugadores[ID].botonera.SetActive(false);
+        estadoActual = EstadosJuego.MOVIMIENTO;
     }
 
 
