@@ -45,6 +45,17 @@ public class Jugador : MonoBehaviour {
         isMoving = true;
         //gameObject.transform.DOMove(posAct, 2f).OnComplete(FinMovimiento);
         Tween movimientoActual = gameObject.transform.DOMove(posAct, 2f).SetId("movimientoActual").OnComplete(FinMovimiento);
+        float ang=Vector2.Angle(posAnt, posAct);
+        Quaternion angQ = new Quaternion(0, 1, 0, ang);
+        Quaternion angQ2 = Quaternion.FromToRotation(posAnt, posAct);
+        Quaternion angQ3 = Quaternion.LookRotation(posAct-posAnt);
+        rotation(angQ3);
+    }
+
+    public void rotation(Quaternion ang)
+    {
+        gameObject.transform.DORotateQuaternion(ang, 1f);
+           
     }
 
     private void FinMovimiento()
