@@ -46,16 +46,18 @@ public class Jugador : MonoBehaviour {
         //gameObject.transform.DOMove(posAct, 2f).OnComplete(FinMovimiento);
         Tween movimientoActual = gameObject.transform.DOMove(posAct, 2f).SetId("movimientoActual").OnComplete(FinMovimiento);
         float ang=Vector2.Angle(posAnt, posAct);
-        Quaternion angQ = new Quaternion(0, 1, 0, ang);
-        Quaternion angQ2 = Quaternion.FromToRotation(posAnt, posAct);
-        Quaternion angQ3 = Quaternion.LookRotation(posAct-posAnt);
-        rotation(angQ3);
+        ang = AngleBetweenVector2(posAnt, posAct);
+
+        transform.DORotate(new Vector3(0, 0, ang - 90), 1f); // el -90 es porque el coche esta girado en el sprite
     }
 
-    public void rotation(Quaternion ang)
+    
+
+    private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
     {
-        gameObject.transform.DORotateQuaternion(ang, 1f);
-           
+        Vector2 diference = vec2 - vec1;
+        float sign = (vec2.y < vec1.y) ? -1.0f : 1.0f;
+        return Vector2.Angle(Vector2.right, diference) * sign;
     }
 
     private void FinMovimiento()
