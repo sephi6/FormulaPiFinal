@@ -22,7 +22,8 @@ public class cameraMovement : MonoBehaviour
         {
             case GameMaster.EstadosJuego.INSTANCIACION_BOTONERA: {
                 player = GameMaster.instance.Jugadores[GameMaster.instance.IDJugadorActual];
-                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+                //transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z),0.9f);
                 //Debug.Log("ID" + GameMaster.instance.IDJugadorActual); 
                 break;
             }

@@ -10,6 +10,8 @@ public class GameMaster : MonoBehaviour {
 
     public EstadosJuego estadoActual;
 
+    public UIController uicontroller;
+
     public List<Jugador> Jugadores;
     public int IDJugadorActual;
 
@@ -50,7 +52,7 @@ public class GameMaster : MonoBehaviour {
             case EstadosJuego.MOVIMIENTO : break;
             case EstadosJuego.SIGUIENTE_JUGADOR : {SiguienteJugador(); break;}
             case EstadosJuego.FIN:
-
+                uicontroller.textoGanador(IDJugadorActual+1);
                 Debug.Log("FIN");
                 break;
 

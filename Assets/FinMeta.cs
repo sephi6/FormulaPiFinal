@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FinMeta : MonoBehaviour
 {
-
+    public int ganador;
     // Use this for initialization
     void Start()
     {
@@ -21,7 +21,9 @@ public class FinMeta : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+
             GameMaster.instance.estadoActual = GameMaster.EstadosJuego.FIN;
+            
         }
     }
 }
