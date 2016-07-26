@@ -17,6 +17,8 @@ public class GameMaster : MonoBehaviour {
 
     public int turnoActual;
 
+    public int idEscena;
+
    
 
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class UIController : MonoBehaviour {
@@ -9,6 +10,9 @@ public class UIController : MonoBehaviour {
 
     public Text textoTurno;
     public GameMaster gameMaster;
+
+
+    
 
     //public static UIController instance;
 
@@ -50,6 +54,16 @@ public class UIController : MonoBehaviour {
     {
         panelFin.SetActive(true);
         ganador.text = "Jugador " + i + " gana";
+    }
+
+    public void vuelveMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void rejugar()
+    {
+        SceneManager.LoadScene(GameMaster.instance.idEscena);
     }
 }
 

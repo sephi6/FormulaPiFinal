@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIControllerMenu : MonoBehaviour {
 
@@ -54,10 +55,11 @@ public class UIControllerMenu : MonoBehaviour {
                 switch (mapa)
                 {
                     case 1:
-                        //CARGA MAPA 1 DE 1P
+                        SceneManager.LoadScene(3);
                         break;
                     case 2:
                         //CARGA MAPA 1 DE 2P
+                        SceneManager.LoadScene(4);
                         break;
                 }
 
@@ -69,9 +71,11 @@ public class UIControllerMenu : MonoBehaviour {
                 {
                     case 1:
                         //CARGA MAPA 2 DE 1P
+                        SceneManager.LoadScene(1);
                         break;
                     case 2:
                         //CARGA MAPA 2 DE 2P
+                        SceneManager.LoadScene(2);
                         break;
                 }
                 break;
