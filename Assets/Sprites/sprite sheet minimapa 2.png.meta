@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: ecba61957b2c65f4d899b797b4847e31
+timeCreated: 1472470731
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: mapa2
+    21300002: mapa1peq
+    21300004: sprite sheet minimapa 2_0
+    21300006: sprite sheet minimapa 2_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -5
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: mapa2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 542
+        width: 519
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -255.5, y: 230}
+        - {x: -257.5, y: 228}
+        - {x: -257.5, y: -228}
+        - {x: -255.5, y: -230}
+        - {x: 256.5, y: -230}
+        - {x: 258.5, y: -228}
+        - {x: 258.5, y: 228}
+        - {x: 256.5, y: 230}
+    - name: mapa1peq
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 638
+        width: 307
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -150.5, y: 134.5}
+        - {x: -152.5, y: 132.5}
+        - {x: -152.5, y: -131.5}
+        - {x: -150.5, y: -133.5}
+        - {x: 149.5, y: -133.5}
+        - {x: 151.5, y: -131.5}
+        - {x: 151.5, y: 132.5}
+        - {x: 149.5, y: 134.5}
+    - name: sprite sheet minimapa 2_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 57
+        width: 510
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 2, z: 0, w: 0}
+      outline:
+      - - {x: -249, y: 227}
+        - {x: -251, y: 226}
+        - {x: -251, y: 204}
+        - {x: -250, y: -222}
+        - {x: -248, y: -224}
+        - {x: 251, y: -224}
+        - {x: 253, y: -222}
+        - {x: 253, y: 225}
+        - {x: 251, y: 227}
+    - name: sprite sheet minimapa 2_1
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 285
+        width: 106
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 44.5}
+        - {x: -52, y: -45.5}
+        - {x: 51, y: -45.5}
+        - {x: 52, y: -43.5}
+        - {x: 52, y: 42.5}
+        - {x: 50, y: 44.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
